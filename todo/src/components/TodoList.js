@@ -1,14 +1,21 @@
 import React from "react";
 
-const ToDoList = props => {
-  console.log(props.propsPassedToToDoList);
+const ToDoList = ({ todoListProps, toggleToDo }) => {
+  // console.log(todoListProps)
+  // console.log(toggleToDo)
+
   return (
-    <div>
-      ToDoList
-      {props.propsTodos.map(todos => (
-        <div key={todos.id}>{todos.item}</div>
+    <>
+      {todoListProps.map(todoItem => (
+        <div
+          key={todoItem.id}
+          onClick={() => toggleToDo(todoItem.id)}
+          className={todoItem.completed ? "completed" : ""}
+        >
+          {todoItem.item}
+        </div>
       ))}
-    </div>
+    </>
   );
 };
 
