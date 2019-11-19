@@ -1,14 +1,14 @@
 export const intialState = {
   todos: [
     {
-      item: "Master React",
+      item: "Learn about reducers",
       completed: false,
-      id: 00001
+      id: 3892987589
     },
     {
       item: "Learn more React",
       completed: false,
-      id: 00002
+      id: 3892987590
     }
   ]
 };
