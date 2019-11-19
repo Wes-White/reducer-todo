@@ -6,11 +6,15 @@ import ToDoList from "./components/TodoList";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, intialState);
+
+  const addTodo = todo => {
+    dispatch({ type: "AddTodo", payload: todo });
+  };
   return (
     <div className="App">
       <h1>Todo List</h1>
       <ToDoList propsTodos={state.todos} />
-      <TodoForm />
+      <TodoForm addNewTodo={addTodo} />
     </div>
   );
 }
