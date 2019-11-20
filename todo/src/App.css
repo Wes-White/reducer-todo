@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+h1 {
+  color: #00acee;
+  font-size: 70px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+input {
+  font-size: 20px;
+  border: none;
+  margin: 10px 0 30px 0;
+  border-bottom: 1px solid black;
+}
+
+.todo-text {
+  font-size: 50px;
+}
+
+button {
+  background-color: #00acee;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  margin: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
