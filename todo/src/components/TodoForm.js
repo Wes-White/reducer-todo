@@ -3,14 +3,14 @@ import React, { useState } from "react";
 const TodoForm = ({ newTodo, clearCompleted }) => {
   const [todo, setToDo] = useState("");
 
-  const handleSubmit = event => {
-    event.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault();
     newTodo(todo);
     setToDo("");
   };
 
-  const handleChange = event => {
-    setToDo(event.target.value);
+  const handleChange = e => {
+    setToDo(e.target.value);
   };
 
   return (
@@ -22,6 +22,7 @@ const TodoForm = ({ newTodo, clearCompleted }) => {
         value={todo}
         onChange={handleChange}
       />
+      <br />
       <button type="submit">Submit</button>
       <button onClick={clearCompleted}>Clear Completed</button>
     </form>

@@ -2,11 +2,10 @@ import React, { useReducer } from "react";
 import { intialState, reducer } from "./reducers/reducer";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import "./App.css";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, intialState);
-  // console.log(state)
-  // console.log(state.todoItems)
 
   const addToDo = todo => {
     dispatch({ type: "ADD_TODO", payload: todo });

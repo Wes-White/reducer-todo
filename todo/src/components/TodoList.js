@@ -1,11 +1,8 @@
 import React from "react";
 
 const ToDoList = ({ todoListProps, toggleToDo }) => {
-  // console.log(todoListProps)
-  // console.log(toggleToDo)
-
   return (
-    <>
+    <div className="todo-text">
       {todoListProps.map(todoItem => (
         <div
           key={todoItem.id}
@@ -15,7 +12,7 @@ const ToDoList = ({ todoListProps, toggleToDo }) => {
           {todoItem.item}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
